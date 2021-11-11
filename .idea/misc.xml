@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Tanim_Workspace/AMS/app/src/main/res/drawable/ic_favorites.xml" value="0.22552083333333334" />
+        <entry key="..\:/Tanim_Workspace/AMS/app/src/main/res/drawable/ic_location.xml" value="0.22552083333333334" />
+        <entry key="..\:/Tanim_Workspace/AMS/app/src/main/res/drawable/ic_person.xml" value="0.22552083333333334" />
+        <entry key="..\:/Tanim_Workspace/AMS/app/src/main/res/drawable/ic_subject.xml" value="0.22552083333333334" />
+        <entry key="..\:/Tanim_Workspace/AMS/app/src/main/res/drawable/ic_textsms.xml" value="0.22552083333333334" />
+        <entry key="..\:/Tanim_Workspace/AMS/app/src/main/res/layout/activity_main.xml" value="0.209375" />
         <entry key="..\:/_Kayes_Workspace/AMS/app/src/main/res/layout/activity_home.xml" value="0.209375" />
         <entry key="..\:/_Kayes_Workspace/AMS/app/src/main/res/layout/activity_login.xml" value="0.209375" />
       </map>

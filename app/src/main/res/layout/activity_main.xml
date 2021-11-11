@@ -1,9 +1,451 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@color/grey_10"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/world_map"
+            app:tint="@color/overlay_light_30" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:contentInsetStartWithNavigation="0dp"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:subtitle="welcome to MaterialX"
+            app:subtitleTextAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+            app:subtitleTextColor="@color/grey_10"
+            app:title="Hi, Admin" />
+
+    </RelativeLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-36dp"
+        android:scrollbars="none"
+        android:scrollingCache="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="35dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                android:layout_marginLeft="@dimen/spacing_middle"
+                android:layout_marginRight="@dimen/spacing_middle"
+                android:layout_marginTop="@dimen/spacing_middle"
+                android:visibility="visible"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_middle">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/spacing_mxlarge" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:clickable="true"
+                                android:tint="@android:color/white"
+                                app:backgroundTint="@color/yellow_600"
+                                app:elevation="0dp"
+                                app:fabSize="auto"
+                                app:maxImageSize="40dp"
+                                app:rippleColor="@android:color/white"
+                                app:srcCompat="@drawable/users"
+                                tools:ignore="VectorDrawableCompat" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/spacing_medium"
+                                android:text="RENTERS"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                                android:textColor="@color/grey_40"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:clickable="true"
+                                android:tint="@android:color/white"
+                                app:backgroundTint="@color/orange_300"
+                                app:elevation="0dp"
+                                app:fabSize="auto"
+                                app:maxImageSize="40dp"
+                                app:rippleColor="@android:color/white"
+                                app:srcCompat="@drawable/flats"
+                                tools:ignore="VectorDrawableCompat" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/spacing_medium"
+                                android:text="APARTMENTS"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                                android:textColor="@color/grey_40"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:clickable="true"
+                                android:tint="@android:color/white"
+                                app:backgroundTint="@color/red_300"
+                                app:elevation="0dp"
+                                app:fabSize="auto"
+                                app:maxImageSize="40dp"
+                                app:rippleColor="@android:color/white"
+                                app:srcCompat="@drawable/house"
+                                tools:ignore="VectorDrawableCompat" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/spacing_medium"
+                                android:text="MANAGEMENT"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                                android:textColor="@color/grey_40"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/spacing_mlarge" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:clickable="true"
+                                android:tint="@android:color/white"
+                                app:backgroundTint="@color/holo_blue_dark"
+                                app:elevation="0dp"
+                                app:fabSize="auto"
+                                app:maxImageSize="40dp"
+                                app:rippleColor="@android:color/white"
+                                app:srcCompat="@drawable/invoices" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/spacing_medium"
+                                android:text="INVOICE"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                                android:textColor="@color/grey_40"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:clickable="true"
+                                android:tint="@android:color/white"
+                                app:backgroundTint="@color/pink_200"
+                                app:elevation="0dp"
+                                app:fabSize="auto"
+                                app:maxImageSize="40dp"
+                                app:rippleColor="@android:color/white"
+                                app:srcCompat="@drawable/expenses"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/spacing_medium"
+                                android:text="EXPENSE"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                                android:textColor="@color/grey_40"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:clickable="true"
+                                android:tint="@android:color/white"
+                                app:backgroundTint="@color/blue_grey_100"
+                                app:elevation="0dp"
+                                app:fabSize="auto"
+                                app:maxImageSize="40dp"
+                                app:rippleColor="@android:color/white"
+                                app:srcCompat="@drawable/report" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/spacing_medium"
+                                android:text="NEARABY"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                                android:textColor="@color/grey_40"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/spacing_mlarge" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:clickable="true"
+                                android:tint="@android:color/white"
+                                app:backgroundTint="@color/purple_200"
+                                app:elevation="0dp"
+                                app:fabSize="auto"
+                                app:maxImageSize="40dp"
+                                app:rippleColor="@android:color/white"
+                                app:srcCompat="@drawable/setting" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/spacing_medium"
+                                android:text="SETTING"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                                android:textColor="@color/grey_40"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:clickable="true"
+                                android:tint="@android:color/white"
+                                app:backgroundTint="@color/red_500"
+                                app:elevation="0dp"
+                                app:fabSize="auto"
+                                app:maxImageSize="40dp"
+                                app:rippleColor="@android:color/white"
+                                app:srcCompat="@drawable/guard" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/spacing_medium"
+                                android:text="EXPENSE"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                                android:textColor="@color/grey_40"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:clickable="true"
+                                android:tint="@android:color/white"
+                                app:backgroundTint="@color/green_100"
+                                app:elevation="0dp"
+                                app:fabSize="auto"
+                                app:maxImageSize="40dp"
+                                app:rippleColor="@android:color/white"
+                                app:srcCompat="@drawable/logout" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/spacing_medium"
+                                android:text="NEARABY"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                                android:textColor="@color/grey_40"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/spacing_mlarge" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_large"
+                android:layout_marginLeft="@dimen/spacing_middle"
+                android:layout_marginRight="@dimen/spacing_middle"
+                android:layout_marginTop="@dimen/spacing_middle"
+                android:visibility="visible"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/spacing_large">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Balance"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/grey_60" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$ 730"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/green_400"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_rounded_orange"
+                        android:paddingBottom="@dimen/spacing_small"
+                        android:paddingLeft="@dimen/spacing_xmedium"
+                        android:paddingRight="@dimen/spacing_xmedium"
+                        android:paddingTop="@dimen/spacing_small">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="415 Points"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+                            android:textColor="@android:color/white" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
